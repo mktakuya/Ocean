@@ -4,7 +4,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetFullscreen(true);
-    ofBackground(0, 191, 255);
+    background.loadImage("ocean.png");
     
     for (int i = 0; i < 5; i++) {
         kaiso[i].loadImage("kaiso.png");
@@ -50,6 +50,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    background.draw(0, 0);
     for (int i = 0; i < 5; i++) {
         konbu[i].draw(konbuX[i], konbuY[i] - konbuH);
     }
